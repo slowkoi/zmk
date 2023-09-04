@@ -17,7 +17,7 @@ endif
 
 config MOUSE_LAYER_INDEX
 	int "Index of mouse layer"
-	default 4
+	default 3
 
 config SCROLL_LAYER_INDEX
 	int "Index of scroll layer"
