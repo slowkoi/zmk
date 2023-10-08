@@ -79,10 +79,10 @@ static void zmk_trackballs_poll_handler(struct k_work *work) {
 	struct trackballs_data_item *item = CONTAINER_OF(work, struct trackballs_data_item, poll_work);
   const struct device *dev = item->dev;
 
-  if (!atomic_test_and_set_bit(timer_set_bit, 1)) {
-    zmk_keymap_layer_activate(CONFIG_MOUSE_LAYER_INDEX);
-    k_timer_start(&mouse_layer_timer, K_MSEC(CONFIG_MOUSE_LAYER_ACTIVE_MS), K_NO_WAIT);
-  }
+  // if (!atomic_test_and_set_bit(timer_set_bit, 1)) {
+  //   zmk_keymap_layer_activate(CONFIG_MOUSE_LAYER_INDEX);
+  //   k_timer_start(&mouse_layer_timer, K_MSEC(CONFIG_MOUSE_LAYER_ACTIVE_MS), K_NO_WAIT);
+  // }
 
   // fetch dx and dy from sensor and save them into pixart_data structure
   int ret = sensor_sample_fetch(dev);
